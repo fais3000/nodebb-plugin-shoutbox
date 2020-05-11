@@ -1,4 +1,4 @@
-https://packages.nodebb.org/api/v1/plugins/nodebb-plugin-blog-comments/compatibility.png
+![alt text](https://packages.nodebb.org/api/v1/plugins/nodebb-plugin-blog-comments/compatibility.png)
 
 # NodeBB Shoutbox plugin
 
