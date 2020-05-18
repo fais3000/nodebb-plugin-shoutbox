@@ -2,7 +2,7 @@
   "id": "nodebb-plugin-shoutbox",
   "name": "Shoutbox",
   "description": "NodeBB Plugin Shoutbox",
-  "url": "https://github.com/byNeHo/nodebb-plugin-shoutbox",
+  "url": "https://github.com/fais3000/nodebb-plugin-shoutbox",
   "library": "./library.js",
   "hooks": [
     { "hook": "static:app.load", "method": "init.load" },
