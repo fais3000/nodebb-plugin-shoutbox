@@ -1,5 +1,5 @@
 {
-  "name": "nodebb-plugin-shoutbox-neho",
+  "name": "nodebb-plugin-shoutbox",
   "version": "0.3.6",
   "description": "NodeBB Shoutbox Plugin",
   "main": "library.js",
@@ -8,17 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/byNeHo/nodebb-plugin-shoutbox"
+    "url": "https://github.com/fais3000/nodebb-plugin-shoutbox"
   },
   "keywords": [
     "nodebb",
     "plugin",
     "shoutbox"
+    "authenticated"
   ],
-  "author": "NeHo",
+  "author": "fais3000",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/byNeHo/nodebb-plugin-shoutbox/issues"
+    "url": "https://github.com/fais3000/nodebb-plugin-shoutbox/issues"
   },
   "dependencies": {
     "async": "~1.5.2",
