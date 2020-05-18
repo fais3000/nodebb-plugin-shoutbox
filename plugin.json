@@ -2,17 +2,17 @@
   "id": "nodebb-plugin-shoutbox",
   "name": "Shoutbox",
   "description": "NodeBB Plugin Shoutbox",
-  "url": "https://github.com/Schamper/nodebb-plugin-shoutbox",
+  "url": "https://github.com/byNeHo/nodebb-plugin-shoutbox",
   "library": "./library.js",
   "hooks": [
     { "hook": "static:app.load", "method": "init.load" },
     { "hook": "filter:admin.header.build", "method": "init.addAdminNavigation" },
     { "hook": "filter:header.build", "method": "init.addGlobalNavigation" },
+    { "hook": "filter:sounds.get", "method": "init.getSounds" },
 
     { "hook": "filter:user.customSettings", "method": "settings.addUserSettings" },
     { "hook": "filter:user.getSettings", "method": "settings.getUserSettings" },
     { "hook": "action:user.saveSettings", "method": "settings.saveUserSettings" },
-    { "hook": "filter:user.whitelistFields", "method": "settings.addUserFieldWhitelist" },
 
     { "hook": "filter:widgets.getWidgets", "method": "widget.define" },
     { "hook": "filter:widget.render:shoutbox", "method": "widget.render" }
@@ -25,19 +25,21 @@
   ],
   "scripts": [
     "public/js/loader.js",
-    "public/js/lib/"
+    "public/js/lib/actions.js",
+    "public/js/lib/base.js",
+    "public/js/lib/commands.js",
+    "public/js/lib/settings.js",
+    "public/js/lib/sockets.js",
+    "public/js/lib/utils.js",
+    "public/js/lib/actions/bug.js",
+    "public/js/lib/actions/default.js",
+    "public/js/lib/actions/gist.js",
+    "public/js/lib/actions/hide.js",
+    "public/js/lib/actions/settings.js",
+    "public/js/lib/commands/default.js"
   ],
   "acpScripts": [
     "public/js/admin.js"
   ],
-  "soundpack": {
-    "name": "Shoutbox",
-    "dir": "public/sounds",
-    "sounds": {
-      "shoutbox-notification": "shoutbox-notification.mp3",
-      "shoutbox-wobble": "shoutbox-wobble.mp3",
-      "shoutbox-cena": "shoutbox-cena.mp3"
-    }
-  },
   "templates": "./templates"
 }

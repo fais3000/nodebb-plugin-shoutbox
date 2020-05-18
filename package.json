@@ -1,6 +1,6 @@
 {
-  "name": "nodebb-plugin-shoutbox",
-  "version": "0.3.4",
+  "name": "nodebb-plugin-shoutbox-neho",
+  "version": "0.3.6",
   "description": "NodeBB Shoutbox Plugin",
   "main": "library.js",
   "scripts": {
@@ -8,23 +8,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Schamper/nodebb-plugin-shoutbox"
+    "url": "https://github.com/byNeHo/nodebb-plugin-shoutbox"
   },
   "keywords": [
     "nodebb",
     "plugin",
     "shoutbox"
   ],
-  "author": "Schamper <mrwafflewaffle@aim.com>",
+  "author": "NeHo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Schamper/nodebb-plugin-shoutbox/issues"
+    "url": "https://github.com/byNeHo/nodebb-plugin-shoutbox/issues"
   },
   "dependencies": {
     "async": "~1.5.2",
     "string": "~3.3.1"
   },
   "nbbpm": {
-    "compatibility": "^1.6.1"
+    "compatibility": "^1.13.3"
   }
 }

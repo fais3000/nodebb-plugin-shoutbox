@@ -39,7 +39,9 @@
             </div>
 
             <div class="input-group">
-                <input type="text" placeholder="enter message" name="shoutbox-message" class="shoutbox-message-input form-control">
+                <div class="fg-line">
+                    <input type="text" placeholder="enter message" name="shoutbox-message" class="shoutbox-message-input form-control">
+                </div>
                 <span class="input-group-btn">
                     <button class="shoutbox-message-send-btn btn btn-primary" type="button">Send</button>
                 </span>
