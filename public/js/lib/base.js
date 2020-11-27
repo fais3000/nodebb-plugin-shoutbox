@@ -1,5 +1,5 @@
 "use strict";
-/*global templates, Mentions, emojiExtended*/
+/*global Mentions, emojiExtended*/
 
 (function(Shoutbox) {
 	var Instance = function(container, options) {
@@ -36,7 +36,6 @@
 		this.sockets = Shoutbox.sockets.init(this);
 		this.settings = Shoutbox.settings.init(this);
 		this.actions = Shoutbox.actions.init(this);
-		this.commands = Shoutbox.commands.init(this);
 	}
 
 	Instance.prototype.addShouts = function(shouts) {
@@ -85,35 +84,37 @@
 		this.vars.lastUid = lastUid;
 		this.vars.lastSid = lastSid;
 
-		templates.parse('shoutbox/shouts', {
-			shouts: shouts
-		}, function(html) {
-			self.dom.shoutsContainer.append(html);
-			self.utils.scrollToBottom(shouts.length > 1);
-
-			// Chaos begins here
-			if (Object.keys(timeStampUpdates).length > 0) {
-				// Get all the user elements that belong to the sids that need their timestamp updated
-				var userElements = $('[data-sid]').filter(function() {
-					return timeStampUpdates[$(this).data('sid')] !== undefined;
-				}).prevUntil('.shoutbox-avatar', '.shoutbox-user');
-
-				var i = 0;
-				for (var sid in timeStampUpdates) {
-					if (timeStampUpdates.hasOwnProperty(sid)) {
-						userElements.eq(i).find('span.timeago')
-							.attr('title', timeStampUpdates[sid])
-							.data('timeago', null)
-							.addClass('timeago-update');
-
-						i++;
+		require(["benchpress"], function (Benchpress) {
+			Benchpress.parse('shoutbox/shouts', {
+				shouts: shouts
+			}, function(html) {
+				self.dom.shoutsContainer.append(html);
+				self.utils.scrollToBottom(shouts.length > 1);
+	
+				// Chaos begins here
+				if (Object.keys(timeStampUpdates).length > 0) {
+					// Get all the user elements that belong to the sids that need their timestamp updated
+					var userElements = $('[data-sid]').filter(function() {
+						return timeStampUpdates[$(this).data('sid')] !== undefined;
+					}).prevUntil('.shoutbox-avatar', '.shoutbox-user');
+	
+					var i = 0;
+					for (var sid in timeStampUpdates) {
+						if (timeStampUpdates.hasOwnProperty(sid)) {
+							userElements.eq(i).find('span.timeago')
+								.attr('title', timeStampUpdates[sid])
+								.data('timeago', null)
+								.addClass('timeago-update');
+	
+							i++;
+						}
 					}
 				}
-			}
-
-			if (jQuery.timeago) {
-				$('.timeago-update').removeClass('timeago-update').timeago();
-			}
+	
+				if (jQuery.timeago) {
+					$('.timeago-update').removeClass('timeago-update').timeago();
+				}
+			});
 		});
 	};
 

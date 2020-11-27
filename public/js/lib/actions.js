@@ -1,6 +1,7 @@
 "use strict";
 
 (function(Shoutbox) {
+
 	var allActions = [];
 	
 	var Actions = function(sbInstance) {

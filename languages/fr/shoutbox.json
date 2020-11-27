@@ -1,0 +1,19 @@
+{
+    "archive": "Archive",
+    "order": "Plus ancien",
+    "newer": "Plus récent",
+    "create_gist": "Créer un Gist",
+    "gist_paste_code": "Coller votre code ici",
+    "close": "Fermer",
+    "submit": "Soumettre",
+    "users_online": "Utilisateurs (%1)",
+    "hide_shoutbox": "Cacher la shoutbox",
+    "play_sound_on_new": "Jouer un son lors d'un nouveau message",
+    "show_notification": "Afficher une notification sur la bar de titre lors d'un nouveau message",
+    "shoutbox": "Shoutbox",
+    "sound": "Son",
+    "notification": "Notification",
+    "hide": "Cacher",
+    "send": "Envoyer",
+    "enter_message": "Entrez un message"
+}

@@ -1,7 +1,7 @@
 'use strict';
 /* globals $, app, socket */
 
-define('admin/plugins/shoutbox', ['settings'], function(Settings) {
+define('admin/plugins/shoutbox', ['settings', 'bootbox'], function(Settings, bootbox) {
 	var wrapper;
 
 	var ACP = {};

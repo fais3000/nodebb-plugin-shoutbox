@@ -1,0 +1,19 @@
+{
+    "archive": "Archive",
+    "order": "Order",
+    "newer": "Newer",
+    "create_gist": "Create Gist",
+    "gist_paste_code": "Paste code here",
+    "close": "Close",
+    "submit": "Submit",
+    "users_online": "Users (%1)",
+    "hide_shoutbox": "Hide shoutbox",
+    "play_sound_on_new": "Play a sound on a new shout",
+    "show_notification": "Display a notification in the titlebar on a new shout",
+    "shoutbox": "Shoutbox",
+    "sound": "Sound",
+    "notification": "Notification",
+    "hide": "Hide",
+    "send": "Send",
+    "enter_message": "enter message"
+}

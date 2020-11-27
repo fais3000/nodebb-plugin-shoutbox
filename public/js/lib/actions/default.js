@@ -87,9 +87,7 @@
 				var msg = utils.stripHTMLTags(sbInstance.dom.textInput.val());
 
 				if (msg.length) {
-					sbInstance.commands.parse(msg, function(msg) {
-						sbInstance.sockets.sendShout({ message: msg });
-					});
+					sbInstance.sockets.sendShout({ message: msg });
 				}
 
 				sbInstance.dom.textInput.val('');
